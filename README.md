@@ -1,2 +1,5 @@
 # COVID-19-Centre
-Seed.js File: This file contains the details of the patients to be seeded
+Seed.js File:
+
+To run this Web app:
+First seed the data from Seed.js File
