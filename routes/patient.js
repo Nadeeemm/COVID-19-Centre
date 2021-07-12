@@ -4,6 +4,13 @@ const Patient = require("../models/patient");
 
 
 
+
+
+router.get("/", async (req, res) => {
+    const patients = await Patient.find({});
+    res.render("patient/home", { patients });
+});
+
 // =========== Display All Patients ==============
 router.get("/patients", async (req, res) => {
     const patients = await Patient.find({});
