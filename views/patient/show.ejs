@@ -1,0 +1,53 @@
+<%- include("../partials/header")%>
+    <%- include("../partials/navbar")%>
+
+
+
+        <div class="container" style="margin-top: 2rem;">
+
+
+            <a href="/patients" class="btn btn-dark">Go Back</a>
+            <div class="row">
+                <div class="col-lg">
+                    <div class="card text-center m-3" style="width: 70rem">
+                        <img style="width: 100px; height: 100px;" src="<%= patient.img %> "
+                            class="card-img-top p-2 pimg" />
+                        <div class="card-body">
+                            <h5 class="card-title">Name: <%= patient.name%>
+                            </h5>
+                            <h6 class="card-text">Gender/Age: <%= patient.gender%>, <%= patient.age%>
+                            </h6>
+                            <p class="card-text">Report: <%= patient.report%>
+                            </p>
+                            <p class="card-text"><strong>More Detail:</strong>  <%= patient.detail%>
+                            </p>
+
+
+                            <a href="/patients/<%=patient._id%>/edit" class="btn btn-warning">Update Report</a>
+
+
+
+                            <div style="display:inline-block" class="mt-3">
+                                <form action="/patients/<%=patient._id%>?_method=DELETE" method="POST">
+                                    <button class="btn btn-danger">Discharge</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        <%- include("../partials/footer")%>

@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/navbar") %>
+
+        <main class="container">
+
+            <div class="row patients">
+                <% for (let patient of patients){ %>
+
+                    <div class="col-lg">
+                        <div class="card text-center m-3" style="width: 18rem">
+                            <img style="width: 100px; height: 100px; border-radius: 20px;" src="<%= patient.img %> " class="card-img-top p-2 pimg" />
+                            <div class="card-body">
+                                <h5 class="card-title">Name: <%= patient.name%>
+                                </h5>
+                                <h6 class="card-text">Gender/Age: <%= patient.gender%>, <%= patient.age%>
+                                </h6>
+                                <p class="card-text">Report: <%= patient.report%>
+                                </p>
+                                <a href="/patients/<%= patient._id %>" class="btn btn-outline-primary">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </main>
+
+        <%- include("../partials/footer") %>

@@ -1,0 +1,23 @@
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+
+
+
+<div class="container" style="margin-top:3rem;width:80vw;margin-bottom: 11rem;">
+ 
+            <form class="validated-form" action="/patients/<%=patient._id%>?_method=PATCH" method="POST" style="max-width:70%;margin:10px auto" novalidate>
+              
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Report: </label>
+                    <input type="text" class="form-control" id="report" placeholder="Updated Report" name="patient[report]" value="<%=patient.report%>" required>
+                </div>
+        
+             
+                <button type="submit" class="btn btn-success">Update</button>
+              </form>
+        
+   
+</div>
+
+<%- include("../partials/footer")%>
